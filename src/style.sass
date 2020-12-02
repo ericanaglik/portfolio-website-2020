@@ -643,6 +643,9 @@ nav
 #portfolio
   padding: 100px 0 100px 0
 
+.portfolio-container 
+  max-width: 90vw
+
 .card
   max-width: 350px
   margin: auto
@@ -709,6 +712,18 @@ nav
       text-align: left
       padding: 20px
       margin: 0px
+
+.portfolio-grid-container
+  padding: 20px
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))
+
+  > div
+    margin: 25px
+    margin-left: 10px
+
+
+
     
 /* Graphic Design Section
  *********************************************************************/
@@ -734,23 +749,148 @@ nav
     
 /* Drawings Section *********************************************************************
 
-#drawings
+#drawings-section
   padding: 100px 0 100px 0
   
-.image
-  background-color: #5a5a5a
-  width: 100%
-  height: auto
-  margin-left: auto
-  margin-right: auto
-  transition: .5s
+#drawings
+  height: 100%
+  perspective-origin: 50% 50%
+  perspective: 800px
 
-  &:hover
-    opacity: 0.6
-    transition: .3s
-    background-image: url(../images/hoverbg.png)
+.drawing-card
+  width: 340px
+  height: 480px
+  background-color: #fff
+  background-image: url(https://images.pokemontcg.io/smp/SM156.png)
+  background-size: contain
+  background-repeat: no-repeat
+  background-position: center
+  border-radius: 8px
+  box-shadow: 0 0 6px 2px rgba(255, 230, 0, 0.75), 0 35px 25px -15px rgba(0, 0, 0, 0.5)
+  position: relative
+  overflow: hidden
+  display: inline-block
+  margin: 20px 10px
+  transform: translate3d(0%, 0%, -400px)
+
+  &.totoro
+    background-image: url(https://i.ibb.co/bb9dkYm/Untitled-Artwork-4.png)
+
+  &.codequeen
+    background-image: url(https://i.ibb.co/sqNHWj3/Untitled-Artwork-3.png)
+
+    &:before, &:after
+      animation-delay: 0.33s
+
+  &.isabelle
+    background-image: url(https://i.ibb.co/vmq1QYR/IMG-2269.png)
+
+    &:before, &:after
+      animation-delay: 0.66s
+
+  &.moogle
+    background-image: url(https://i.ibb.co/7C5ZpBk/Untitled-Artwork-5.png)
+
+    &:before, &:after
+      animation-delay: 0.99s
+
+  &.jiji
+    background-image: url(https://i.ibb.co/8Mm3Ffx/Untitled-Artwork-1.png)
+
+    &:before, &:after
+      animation-delay: 1.32s
+
+  &:before
+    content: ""
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
+    top: 0
+    background-image: linear-gradient(115deg, transparent 0%, #00e7ff 30%, #ff00e7 70%, transparent 100%)
+    background-position: 0% 0%
     background-repeat: no-repeat
+    background-size: 300% 300%
+    mix-blend-mode: color-dodge
+    opacity: 0
+    z-index: 1
+    transform: translate3d(0, 0, 0)
+    animation: holoGradient 15s ease infinite
+
+  &:after
+    content: ""
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
+    top: 0
+    background-image: linear-gradient(115deg, transparent 0%, #00e7ff 30%, #ff00e7 70%, transparent 100%)
+    background-position: 0% 0%
+    background-repeat: no-repeat
+    background-size: 300% 300%
+    mix-blend-mode: color-dodge
+    opacity: 0
+    z-index: 1
+    transform: translate3d(0, 0, 0)
+    animation: holoGradient 15s ease infinite
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/13471/sparkles.gif")
     background-position: center
+    background-size: 180%
+    mix-blend-mode: color-dodge
+    opacity: 0
+    z-index: 2
+    animation: holoSparkle 20s ease infinite
+
+  &.active:before
+    opacity: 0.5
+    animation: none
+    transition: none
+    background-image: linear-gradient(115deg, transparent 0%, transparent 25%, #00e7ff 45%, #ff00e7 55%, transparent 70%, transparent 100%)
+
+@keyframes holoSparkle
+  0%
+    opacity: 0
+
+  12%
+    opacity: 1
+
+  70%
+    opacity: 0.5
+
+  95%
+    opacity: 0.2
+
+@keyframes holoGradient
+  3%
+    opacity: 0
+
+  5%
+    background-position: 0% 0%
+
+  7%
+    opacity: 0.5
+
+  9%
+    background-position: 100% 100%
+
+  11%
+    opacity: 0
+
+  50%
+    opacity: 0
+    background-position: 100% 100%
+
+  55%
+    opacity: 0.3
+
+  70%
+    opacity: 0
+    background-position: 0% 0%
+
+
+
+
+
 
 
 /* Contact Section
