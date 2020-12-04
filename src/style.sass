@@ -735,20 +735,24 @@ nav
   padding: 100px 0 100px 0
   background-color: #F5F5F5
   
-.image
-  background-color: #5a5a5a
-  width: 100%
-  height: auto
-  margin-left: auto
-  margin-right: auto
-  transition: .5s
+ul
+  columns: 300px
+  break-inside: avoid
+  margin-left: 20px
+  margin-right: 20px
+  padding: 0
 
-  &:hover
-    opacity: 0.6
-    transition: .3s
-    background-image: url(../images/hoverbg.png)
-    background-repeat: no-repeat
-    background-position: center
+li
+  list-style-type: none
+
+img
+  width: 100%
+  display: block
+  object-fit: cover
+  margin-top: 0px
+  margin-bottom: 20px
+  border: 1px solid black
+  box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.5)
     
 /* Drawings Section *********************************************************************
 
