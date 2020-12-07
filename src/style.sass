@@ -976,79 +976,186 @@ article
  **********************************************************************
 
 #contact
-  padding: 100px 0 100px 0
-
-input
-  &[type="email"], &[type="number"], &[type="search"], &[type="text"], &[type="tel"], &[type="url"], &[type="password"]
-    height: 38px
-    padding: 6px 10px
-
-    /* The 6px vertically centers text on FF, ignored by Webkit
-    background-color: #F5F5F5
-    border: none
-    box-shadow: none
-    box-sizing: border-box
-    border-radius: 0
-    outline: none
-
-textarea, select
-  height: 38px
-  padding: 6px 10px
-
-  /* The 6px vertically centers text on FF, ignored by Webkit
-  background-color: #F5F5F5
-  border: none
-  box-shadow: none
-  box-sizing: border-box
-  border-radius: 0
-  outline: none
-
-textarea
-  min-height: 250px
-
-input[type="submit"]
-  display: inline-block
-  height: 38px
-  padding: 0 30px
-  color: #fff
-  text-align: center
-  font-size: 11px
-  font-weight: 600
-  line-height: 38px
-  letter-spacing: .1rem
-  text-transform: uppercase
-  text-decoration: none
-  white-space: nowrap
-  background: #5fc3e4
-  border-radius: 0px
-  border: 0
-  cursor: pointer
-  box-sizing: border-box
-
-  &:hover
-    background: #e55d87
-    text-decoration: none
-
-/* Footer Section
- **********************************************************************
-
-footer
-  min-height: 120px
-  padding: 40px 0 40px 0
-  background: #e55d87
-  background: -moz-linear-gradient(-45deg, #e55d87 0%, #5fc3e4 100%)
-  background: -webkit-linear-gradient(-45deg, #e55d87 0%, #5fc3e4 100%)
   background: linear-gradient(135deg, #e55d87 0%, #5fc3e4 100%)
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e55d87', endColorstr='#5fc3e4', GradientType=1 )
-  box-sizing: border-box
+  padding: 100px 0 100px 0
+  overflow: hidden
 
-  p
-    color: #FFFFFF
-    margin: 20px 0 0 0
+.contact-container
+  margin: 90px auto 100px auto
 
-.socialIcons
-  font-size: 34px
-  color: rgba(255, 255, 255, 0.7)
+  position: relative
+
+  .card
+    width: 165px
+    height: 280px
+    padding: 30px
+    border-radius: 10px
+    margin: 80px auto 50px auto
+    background-color: white
+    position: relative
+
+
+@keyframes circle-ani1
+  0%
+    transform: translateX(0px) translateY(0px)
+
+  20%
+    transform: translateX(20px) translateY(-10px)
+
+  40%
+    transform: translateX(-10px) translateY(-30px)
+
+  60%
+    transform: translateX(-20px) translateY(-10px)
+
+  80%
+    transform: translateX(10px) translateY(10px)
+
+  100%
+    transform: translateX(0px) translateY(0px)
+
+@keyframes circle-ani2
+  0%
+    transform: translateX(20px) translateY(0px)
+
+  20%
+    transform: translateX(-10px) translateY(20px)
+
+  40%
+    transform: translateX(0px) translateY(-10px)
+
+  60%
+    transform: translateX(20px) translateY(0px)
+
+  80%
+    transform: translateX(-10px) translateY(20px)
+
+  100%
+    transform: translateX(20px) translateY(0px)
+
+@keyframes circle-ani3
+  0%
+    transform: translateX(-30px) translateY(10px)
+
+  20%
+    transform: translateX(-10px) translateY(0px)
+
+  40%
+    transform: translateX(0px) translateY(-20px)
+
+  60%
+    transform: translateX(20px) translateY(10px)
+
+  80%
+    transform: translateX(15px) translateY(-20px)
+
+  100%
+    transform: translateX(-30px) translateY(10px)
+
+.circle1
+  width: 500px
+  height: 500px
+  background-color: white
+  border: 0
+  opacity: 0.3
+  position: absolute
+  border-radius: 100%
+  bottom: -254px
+  left: -255px
+  animation: circle-ani1 10s infinite
+  animation-timing-function: linear
+
+.circle2
+  width: 120px
+  height: 120px
+  background-color: white
+  border: 0
+  opacity: 0.5
+  position: absolute
+  border-radius: 100%
+  bottom: 214px
+  left: -69px
+  animation: circle-ani2 10s infinite
+  animation-timing-function: linear
+
+.circle3
+  width: 30px
+  height: 30px
+  background-color: white
+  border: 0
+  opacity: 0.6
+  position: absolute
+  border-radius: 100%
+  top: 183px
+  left: 78px
+  animation: circle-ani3 10s infinite
+  animation-timing-function: linear
+
+.circle4
+  width: 220px
+  height: 220px
+  background-color: transparent
+  border: solid 2px white
+  opacity: 0.6
+  position: absolute
+  border-radius: 100%
+  bottom: -100px
+  left: 100px
+  animation: circle-ani3 10s infinite
+  animation-timing-function: linear
+
+.circle5
+  width: 50px
+  height: 50px
+  background-color: white
+  border: 0
+  opacity: 0.5
+  position: absolute
+  border-radius: 100%
+  bottom: 30px
+  left: 298px
+  animation: circle-ani2 10s infinite
+  animation-timing-function: linear
+
+.circle6
+  width: 300px
+  height: 300px
+  background-color: transparent
+  border: solid 2px white
+  opacity: 0.6
+  position: absolute
+  border-radius: 100%
+  top: -150px
+  right: -80px
+  animation: circle-ani3 10s infinite
+  animation-timing-function: linear
+
+.circle7
+  width: 165px
+  height: 165px
+  background-color: white
+  border: 0
+  opacity: 0.45
+  position: absolute
+  border-radius: 100%
+  top: 71px
+  right: -106px
+  animation: circle-ani1 10s infinite
+  animation-timing-function: linear
+
+.circle8
+  width: 20px
+  height: 20px
+  background-color: white
+  border: 0
+  opacity: 0.7
+  position: absolute
+  border-radius: 100%
+  top: 183px
+  right: 78px
+  animation: circle-ani2 10s infinite
+  animation-timing-function: linear
+
 
 /* Lists
  **********************************************************************
